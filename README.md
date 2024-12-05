@@ -19,23 +19,3 @@ This is a simple Java console application that manages a queue of patients based
 ## How It Works
 
 The application uses Java's `PriorityQueue` to manage patients. Patients are sorted in descending order of severity using the `Comparable` interface. The program continually displays a menu for user interaction until the user chooses to exit.
-
-## Classes and Methods
-
-### `Patient`
-- Represents a patient with a name and severity level.
-- Implements the `Comparable` interface to define custom priority rules.
-
-#### Key Methods:
-- `compareTo(Patient other)`: Ensures patients with higher severity are prioritized.
-- `toString()`: Provides a readable representation of a patient's details.
-
-### `PatientManagementSystem`
-- Contains the main method to handle user interactions.
-- Uses a loop to display a menu and perform actions based on user input.
-
-## Usage
-
-1. **Compile the Program**:
-   ```bash
-   javac PatientManagementSystem.java
