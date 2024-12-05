@@ -1,26 +1,41 @@
-Introduction
+# Patient Management System
 
-The Patient Management System is a simple console-based Java application designed to manage a queue of patients based on their severity. It leverages a priority queue (heap) to ensure that patients with the highest severity are always prioritized.
+This is a simple Java console application that manages a queue of patients based on their severity. The program uses a **priority queue** to ensure patients with higher severity are prioritized.
 
-What it Can Do
+## Features
 
-1. Add Patients: Register patients by providing their name and severity level.
+1. **Add Patient**  
+   Users can add patients by entering their name and severity (1-10). A higher severity number means the patient needs immediate attention.
 
+2. **View Next Patient**  
+   Displays the patient with the highest severity in the queue without removing them.
 
-2. View Next Patient: See the next patient to be treated, based on their severity.
+3. **Process Next Patient**  
+   Removes and processes the patient with the highest severity from the queue.
 
+4. **Exit**  
+   Allows the user to exit the program.
 
-3. Process Patients: Remove and display the next patient to be treated.
+## How It Works
 
+The application uses Java's `PriorityQueue` to manage patients. Patients are sorted in descending order of severity using the `Comparable` interface. The program continually displays a menu for user interaction until the user chooses to exit.
 
-4. Exit the System: Safely close the application.
+## Classes and Methods
 
+### `Patient`
+- Represents a patient with a name and severity level.
+- Implements the `Comparable` interface to define custom priority rules.
 
+#### Key Methods:
+- `compareTo(Patient other)`: Ensures patients with higher severity are prioritized.
+- `toString()`: Provides a readable representation of a patient's details.
 
-Why This Application?
+### `PatientManagementSystem`
+- Contains the main method to handle user interactions.
+- Uses a loop to display a menu and perform actions based on user input.
 
-This application was created to demonstrate the practical use of a heap data structure in solving real-world problems. Managing priority queues, like patient severity, is a critical task in healthcare systems. This application contributes to understanding how data structures can optimize processes and decision-making.
+## Usage
 
-How It Helps the Community
-
-The Patient Management System can be a foundational tool for teaching data structures in computer science. Additionally, it emphasizes the importance of prioritization in life-critical systems like healthcare.
+1. **Compile the Program**:
+   ```bash
+   javac PatientManagementSystem.java
